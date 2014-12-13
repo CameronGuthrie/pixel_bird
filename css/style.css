@@ -1,8 +1,13 @@
 html, body{
+	font-family: sans-serif;
 	padding: 0px;
 	margin: 0px;
-	background-color: #836eea;
+	background-color: rgba(170,110,220,1);
 	width: 100%;
+}
+
+*{
+	box-sizing: border-box;
 }
 
 img, img[src$=".gif"], img[src$=".png"] { 
@@ -14,8 +19,41 @@ img, img[src$=".gif"], img[src$=".png"] {
  	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
  }
 
+.inner {
+	top: 10px;
+	position: relative;
+	width: 520px;
+	background: rgba(50,50,50,1);
+	padding: 8px;
+	margin: auto;
+}
+
+.inner a {
+  display: block;
+  padding: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: #f6f6f6; }
+  .inner a i {
+    color: #eaeaea;
+    font-size: 17.6px; }
+  .inner a:last-child {
+    margin-bottom: 0; }
+  .inner a:nth-child(1) {
+    background: #E84343; }
+    .inner a:nth-child(1):hover {
+      background: #ff5757; }
+  .inner a:nth-child(2) {
+    background: #F1A42C; }
+    .inner a:nth-child(2):hover {
+      background: #ffb430; }
+  .inner a:nth-child(3) {
+    background: #66D133; }
+    .inner a:nth-child(3):hover {
+      background: #7afa3d; }
+
 #changelog{
-	font-family: sans-serif;
 	font-weight: 100;
 	width: 512px;
 	margin: auto;
@@ -40,7 +78,16 @@ img, img[src$=".gif"], img[src$=".png"] {
 	padding-bottom: 30px;
 	color: rgba( 40,40,40,1);
 }
-
+#footer a{
+	text-decoration: none;
+	color: rgba(240,240,240,1);
+	font-weight: 500;
+}
+#footer a:hover{
+	cursor: pointer;
+	/* letter-spacing: 0.03em; */
+	border-bottom: 3px solid rgba(200,150,250,1);
+}
 /* BIRD IN THE HEADER SHIT */
 
 #randombird{
@@ -195,7 +242,7 @@ img, img[src$=".gif"], img[src$=".png"] {
 #gameframe {
 	padding-top: 4px;
 	width: 520px;
-	height: 652px;
+	height: 656px;
 	background-color: black;
 	position: relative;
 	margin: auto;
