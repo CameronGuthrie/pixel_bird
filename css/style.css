@@ -1,0 +1,564 @@
+html, body{
+	padding: 0px;
+	margin: 0px;
+	background-color: #836eea;
+	width: 100%;
+}
+
+img, img[src$=".gif"], img[src$=".png"] { 
+	image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+ 	image-rendering: -moz-crisp-edges;          /* Firefox                        */
+ 	image-rendering: -o-crisp-edges;            /* Opera                          */
+ 	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+ 	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+ 	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+ }
+
+#changelog{
+	font-family: sans-serif;
+	font-weight: 100;
+	width: 512px;
+	margin: auto;
+	color: rgba( 40,40,40,1);
+}
+
+#header{
+	width: 512px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	top: 20px;
+}
+
+#footer{
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: 100;
+	width: 512px;
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: rgba( 40,40,40,1);
+}
+
+/* BIRD IN THE HEADER SHIT */
+
+#randombird{
+	position: relative;
+	width: 85px;
+	height: 65px;
+	background: transparent url(../images/bird.gif);
+	background-size:100%;
+	border: 0px solid rgba(0,0,0,0);
+
+	-webkit-animation: randombird .25s steps(3, end) infinite;
+    -moz-animation: randombird .25s steps(3, end) infinite;
+    animation: randombird .25s steps(3, end) infinite;
+}
+
+@-webkit-keyframes randombird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -210px; }
+}
+
+@-moz-keyframes randombird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -210px; }
+}
+
+@keyframes randombird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -210px; }
+}
+
+#bobbing {
+	margin-bottom: 50px;
+	margin-left: 214px;
+	position: relative;
+	-webkit-animation: bobob 1s steps(60, end) infinite;
+    -moz-animation: bobob 1s steps(60, end) infinite;
+    animation: bobob 1s steps(60, end) infinite;
+}
+
+@-webkit-keyframes bobob {
+	0% { top: 0px; }
+	50% { top: 30px; }
+	100% { top: 0px; }
+}
+
+@-moz-keyframes bobob {
+	0% { top: 0px; }
+	50% { top: 30px; }
+	100% { top: 0px; }
+}
+
+@keyframes bobob {
+	0% { top: 0px; }
+	50% { top: 30px; }
+	100% { top: 0px; }
+}
+
+/* Ground animation */
+
+#groundlol{
+	position: absolute;
+	top: 300px;
+
+	height: 50px;
+	width: 110%;
+	background: transparent url(../images/ground-repeat.gif);
+	border: 0px solid rgba(0,0,0,0);
+
+	-webkit-animation: pangroundlol .25s steps(100, end) infinite;
+    -moz-animation: pangroundlol .25s steps(100, end) infinite;
+    animation: pangroundlol .25s steps(100, end) infinite;
+}
+
+@-webkit-keyframes pangroundlol {
+	0% { left:0px; }
+	50% { left: -50px; }
+	100% { left:-100px; }
+}
+
+@-moz-keyframes pangroundlol {
+	0% { left:0px; }
+	50% { left: -50px; }
+	100% { left:-100px; }
+}
+
+@keyframes pangroundlol {
+	0% { left:0px; }
+	50% { left: -50px; }
+	100% { left:-100px; }
+}
+
+/* other header shit */
+
+#titlething {
+	z-index: 4;
+	left: 10px;
+	top: 10px;
+	width: 1235px;
+	height: 245px;
+	position: absolute;
+	background: transparent url(../images/title.gif);
+	background-size:100%;
+}
+
+#backgroundscene {
+	z-index: 3;
+	top: 95px;
+
+	width: 100%;
+	height: 205px;
+	position: absolute;
+	background: transparent url(../images/background-repeat.gif);
+}
+
+#bannerbar {
+	position: relative;
+	width: 100%;
+	overflow:hidden;
+	background-color: rgba(74,215,251,1);
+	width: 100%;
+	height: 350px;
+}
+
+/* PAGE BODY SHIT */
+
+#playgame {
+	position: relative;
+	margin: 50px auto 0px;
+	width: 500px;
+	height: 200px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#undergroundlol {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background-color: #f7f2ab;
+}
+
+/* GAME PAGE SHIT */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+#gamewrapper {
+	padding-top: 50px;
+}
+
+#gameframe {
+	padding-top: 4px;
+	width: 520px;
+	height: 652px;
+	background-color: black;
+	position: relative;
+	margin: auto;
+}
+
+#game {
+	width: 512px;
+	height: 648px;
+	background-color: pink;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+#skyback {
+	position: absolute;
+	width: 100%;
+	height: 530px;
+	background-color: rgba(74,215,251,1);
+}
+
+#groundback {
+	position: absolute;
+	z-index:4;
+	width: 100%;
+	top: 530px;
+	height: 118px;
+	background-color: #f7f2ab;
+}
+
+#backdrop {
+	top: 350px;
+	height: 164px;
+	width: 100%;
+	z-index: 2;
+	position: absolute;
+	background: transparent url(../images/background-4x.gif);
+}
+
+#groundscroll {
+	position: absolute;
+	top: 514px;
+	z-index: 4;
+
+	height: 40px;
+	width:200%;
+	background: transparent url(../images/ground-4x.gif);
+	border: 0px solid rgba(0,0,0,0);
+
+	-webkit-animation: gameground .5s steps(160, end) infinite;
+    -moz-animation: gameground .5s steps(160, end) infinite;
+    animation: gameground .5s steps(160, end) infinite;
+}
+
+@-webkit-keyframes gameground {
+	0% { left:0px; }
+	50% { left: -40px; }
+	100% { left:-80px; }
+}
+
+@-moz-keyframes gameground {
+	0% { left:0px; }
+	50% { left: -40px; }
+	100% { left:-80px; }
+}
+
+@keyframes gameground {
+	0% { left:0px; }
+	50% { left: -40px; }
+	100% { left:-80px; }
+}
+
+#titletitle {
+	position: absolute;
+	z-index: 3;
+	top: 115px;
+	left: 110px;
+	width: 292px;
+	height: 76px;
+	background: transparent url(../images/pixel-bird-4x.gif);
+}
+
+#titlebird {
+	z-index: 3;
+	top: 230px;
+	left: 222px;
+	position: absolute;
+	width: 68px;
+	height: 52px;
+	background: transparent url(../images/bird-4x.gif);
+	background-size:100%;
+	border: 0px solid rgba(0,0,0,0);
+
+	-webkit-animation: titlebird .25s steps(3, end) infinite;
+    -moz-animation: titlebird .25s steps(3, end) infinite;
+    animation: titlebird .25s steps(3, end) infinite;
+}
+
+@-webkit-keyframes titlebird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -168px; }
+}
+
+@-moz-keyframes titlebird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -168px; }
+}
+
+@keyframes titlebird {
+    from { background-position: 0 0; }
+    to { background-position: 0 -168px; }
+}
+
+#titlebob {
+	position: absolute;
+	-webkit-animation: titlebob 1.1s steps(50, end) infinite;
+    -moz-animation: titlebob 1.1s steps(50, end) infinite;
+    animation: titlebob 1.1s steps(50, end) infinite;
+}
+
+@-webkit-keyframes titlebob {
+	0% { top: 0px; }
+	50% { top: 25px; }
+	100% { top: 0px; }
+}
+
+@-moz-keyframes titlebob {
+	0% { top: 0px; }
+	50% { top: 25px; }
+	100% { top: 0px; }
+}
+
+@keyframes titlebob {
+	0% { top: 0px; }
+	50% { top: 25px; }
+	100% { top: 0px; }
+}
+
+
+#titleplay {
+	position: absolute;
+	z-index: 5;
+	width: 136px;
+	height: 72px;
+	top: 390px;
+	left: 188px;
+	background: transparent url(../images/play-4x.gif);
+	background-size:100%;
+}
+
+#titleplay:hover {
+	cursor: pointer;
+}
+
+#taptoflap {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	width: 328px;
+	height: 376px;
+	top: 115px;
+	left: 92px;
+	background: transparent url(../images/taptoflap-4x.gif);
+	background-size:100%;
+}
+
+#gamebird{
+	display:none;
+	z-index: 4;
+	top: 300px;
+	left: 100px;
+	position: absolute;
+	width: 68px;
+	height: 52px;
+	background: transparent url(../images/bird-4x.gif);
+	background-size:100%;
+	border: 0px solid rgba(0,0,0,0);
+
+	-webkit-animation: titlebird .25s steps(3, end) infinite;
+    -moz-animation: titlebird .25s steps(3, end) infinite;
+    animation: titlebird .25s steps(3, end) infinite;
+}
+
+#birdcollision{
+	background-color: orange;
+	width: 56px;
+	height: 44px;
+	position: absolute;
+	z-index: 4;
+	left: 8px;
+	top: 4px;
+}
+
+#tapoverlay{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 99;
+}
+
+#tapoverlay:hover{
+	cursor: pointer;
+}
+
+#currentscore {
+	z-index: 10;
+	display:none;
+	text-align: center;
+	height: 52px;
+	position: absolute;
+	width: 100%;
+	top: 30px;
+}
+
+#transition {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	left: 100%;
+	background-color: rgba(0,0,0,1);
+}
+
+#flash {
+	background-color: white;
+	height:100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	display:none;
+}
+
+#gameblock{
+	left: 4px;
+	position: absolute;
+	width: 512px;
+	height: 648px;
+}
+
+#gameoverscreen{
+	display: none;
+	z-index: 6;
+	top: 115px;
+	left: 46px;
+	position: absolute;
+	width: 420px;
+	height: 352px;
+	background: transparent url(../images/score-4x.gif);
+	background-size:100%;
+}
+              	/* BARS AND TING */
+
+              	#bar1, #bar2, #bar3{
+              		left: 10000px;
+              		position: absolute;
+              		width: 104px;
+              		height:1390px;
+              		z-index:2;
+              	}
+
+              	#bar1top, #bar2top, #bar3top{
+              		background: transparent url(../images/bardown-4x.gif);
+					
+					position: absolute;
+					width: 104px;
+					height:560px;
+					background-size:100%;
+              	}
+
+              	#bar1bot, #bar2bot, #bar3bot{
+              		background: transparent url(../images/barup-4x.gif);
+					position: absolute;
+					
+					width: 104px;
+					height:560px;
+					background-size:100%;
+              	}
+
+/* SCORE SHIT */
+#score2, #score3, #score4 {
+	background-size: auto;
+	display: inline-block;
+	height: 52px;
+	margin: 0px 3px 0px 2px;
+	text-align: center;
+	width: 32px;
+	background-size: 100%;
+	background: transparent url(../images/bignumbers-4x.gif);
+    background-position: 36px;
+}
+
+#score1{
+	background-size: auto;
+	height: 52px;
+	margin: 0px 3px 0px 2px;
+	text-align: center;
+	display: inline-block;
+	width: 32px;
+	background-size: 100%;
+	background: transparent url(../images/bignumbers-4x.gif);
+    background-position: 36px;
+}
+
+#scored {
+	z-index: 7;
+	position: absolute;
+	text-align: right;
+	width: 180px;
+	height: 28px;
+	display: auto;
+	top: 180px;
+	right: 50px;
+}
+
+#scored4, #scored3, #scored2, #scored1{
+	height: 28px;
+	background-size: auto;
+	display: inline-block;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	width: 20px;
+	display: auto;
+}
+
+#high {
+	z-index: 7;
+	position: absolute;
+	text-align: right;
+	width: 180px;
+	height: 28px;
+	display: auto;
+	top: 300px;
+	right: 50px;
+}
+
+#high4, #high3, #high2, #high1{
+	height: 28px;
+	background-size: auto;
+	display: inline-block;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	width: 20px;
+	display: auto;
+}
+
+#medal {
+	top:176px;
+	left: 60px;
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+#newhighscore{
+	top: 236px;
+	left: 180px;
+	background: transparent url(../images/new-4x.gif);
+	display: block;
+	position: absolute;
+	width: 84px;
+	height: 40px;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- META FOR CHARS ETC -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<!-- TITLE -->
+		<title>Pixel Bird</title>
+
+		<!-- DESCRIPTION -->
+		<meta name="description" content="Flumpington Studios Website - Home of Pixel Bird" />
+
+		<!-- KEYWORDS -->
+		<meta name="keywords" content="" />
+
+		<!-- AUTOR -->
+		<meta name="author" content="Cameron Guthrie - Full AF web design" />
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="../favicon.ico"> 
+
+		<!-- STYLESHEET -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	</head>
+	<body>
+		<div id="header">
+			<div id="bobbing">
+				<div id="randombird">
+				</div>
+			</div>
+			<img src="images/pixel-bird-4x.gif">
+		</div>
+		<div id="gamewrapper">
+
+			<div id="gameframe">
+
+				<div id="gameblock">
+
+					<div id="tapoverlay">
+					</div>
+
+					<div id="flash">
+					</div>
+
+					<div id="game">
+
+						<div id="transition">
+						</div>
+						<div id="titletitle">
+						</div>
+						<div id="titlebob">
+							<div id="titlebird">
+							</div>
+						</div>
+						<div id="skyback">
+						</div>
+						<div id="groundback">
+						</div>
+						<div id="backdrop">
+						</div>
+						<div id="groundscroll">
+						</div>
+						<div id="titleplay">
+						</div>
+						<div id="taptoflap">
+						</div>
+						<div id="gamebird">
+						</div>
+						<div id="currentscore">
+							<div id="score4">
+							</div>
+							<div id="score3">
+							</div>
+							<div id="score2">
+							</div>
+							<div id="score1">
+							</div>
+						</div>
+						<div id="gameoverscreen">
+							<div id="medal">
+							</div>
+							<div id="newhighscore">
+							</div>
+							<div id="scored">
+								<div id="scored4">
+								</div>
+								<div id="scored3">
+								</div>
+								<div id="scored2">
+								</div>
+								<div id="scored1">
+								</div>
+							</div>
+							<div id="high">
+								<div id="high4">
+								</div>
+								<div id="high3">
+								</div>
+								<div id="high2">
+								</div>
+								<div id="high1">
+								</div>
+							</div>
+						</div>
+
+						<div id="bar1">
+							<div id="bar1top">
+							</div>
+							<div id="bar1bot">
+							</div>
+						</div>
+						<div id="bar2">
+							<div id="bar2top">
+							</div>
+							<div id="bar2bot">
+							</div>
+						</div>
+						<div id="bar3">
+							<div id="bar3top">
+							</div>
+							<div id="bar3bot">
+							</div>
+						</div>
+
+					</div> <!-- game -->
+
+					<div id="sounds">
+						<audio id="swish">
+							<source src="sounds/swish.mp3" type="audio/mpeg">
+							<source src="sounds/swish.ogg" type="audio/ogg">
+						</audio>
+						<audio id="punch">
+							<source src="sounds/punch.mp3" type="audio/mpeg">
+							<source src="sounds/punch.ogg" type="audio/ogg">
+						</audio>
+						<audio id="alert">
+							<source src="sounds/alert.mp3" type="audio/mpeg">
+							<source src="mounds/alert.ogg" type="audio/ogg">
+						</audio>
+						<audio id="crack">
+							<source src="sounds/crack.mp3" type="audio/mpeg">
+							<source src="sounds/crack.ogg" type="audio/ogg">
+						</audio>
+					</div> <!-- sounds -->
+
+				</div> <!-- gameblock -->
+
+			</div>
+
+		</div>
+
+		<div  id="changelog">
+			<h2>
+				Changelog
+			</h2>
+			<h3>
+			 	version 0.1.1 - public beta
+			</h3>
+			<ul>
+				<li>
+					all art assets finished and in place
+				</li>
+				<li>
+					increased overall game speed
+				</li>
+				<li>
+					increased bird rotation when falling
+				</li>
+				<li>
+					fixed the skybox bug where you could fly over obstacles
+				</li>
+				<li>
+					added sound assets (may still have issued on mozilla)
+				</li>
+			</ul>
+			<h3>
+				to do list
+			</h3>
+			<ul>
+				<li>
+					fix collision, it's a little wonky
+				</li>
+				<li>
+					minify everything to increase performance
+				</li>
+				<li>
+					work out why the cookies aren't saving scores correctly
+				</li>
+			</ul>
+		</div>
+
+		<div id="footer">
+			&copy; <a href="http://www.fullaf.com/">Full AF</a> 2014
+		</div>
+
+		<!-- SCRIPTS -->
+		<!-- <script src="js/jquery-1.9.1.js"></script>
+		<script src="js/jquery-ui.js"></script> -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/game.js"></script>
+	</body>
+</html>
